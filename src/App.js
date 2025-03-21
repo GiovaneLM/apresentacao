@@ -52,6 +52,18 @@ function App() {
       .then(response => response.json())
       .then(data => console.log('Resposta do servidor:', data))
       .catch(error => console.error('Erro ao enviar dados:', error));
+
+      setNome('');
+      setCpf('');
+      setRg('');
+      setMae('');
+      setEndereco('');
+      setComplemento('');
+      setCidade('');
+      setBairro('');
+      setEstado('');
+      setUsuario('');
+      setSenha('');
   };
 
   return (
