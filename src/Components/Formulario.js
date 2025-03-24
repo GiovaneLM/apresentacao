@@ -50,7 +50,7 @@ function Formulario() {
         console.log('Form Data:', formData); // Exibe os dados do formulário no console
 
         // Envia os dados do formulário para o servidor
-        fetch('http://localhost:8000/register', {
+        fetch('http://localhost:5000/register', {
             method: 'POST', // Método HTTP POST
             headers: { 'Content-Type': 'application/json' }, // Define o cabeçalho como JSON
             body: JSON.stringify(formData), // Converte os dados para JSON e envia
