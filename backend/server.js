@@ -1,3 +1,9 @@
+//npm install express mysql2 cors bcrypt
+//npm init -y
+//npm node server.js
+//servidor roda sempre na porta 5000
+
+
 // Importa o framework Express para criar e gerenciar o servidor web
 const express = require('express');
 
@@ -14,7 +20,7 @@ const bcrypt = require('bcrypt');
 const app = express();
 
 // Define a porta onde o servidor será executado
-const port = 8000;
+const port = 5000;
 
 // Configura o middleware CORS para permitir requisições externas
 app.use(cors());
@@ -25,6 +31,16 @@ app.use(express.json());
 // Rota de teste para verificar se o servidor está rodando
 app.get('/api/data', (req, res) => {
     res.json({ message: 'Servidor está rodando!' });
+});
+
+// Rota de teste para verificar se o servidor está rodando
+app.get('/api/PageInicio', (req, res) => {
+    res.json({ message: 'Pagina de inicio' });
+});
+
+// Rota de teste para verificar se o servidor está rodando
+app.get('/api/PageFormulario', (req, res) => {
+    res.json({ message: 'pagina do formulario pada cadastrar um usuario' });
 });
 
 // Configuração da conexão com o banco de dados MySQL
