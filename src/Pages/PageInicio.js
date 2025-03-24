@@ -1,14 +1,15 @@
 import React from 'react'
 import Header from '../Components/Header'
 import Navegacao from '../Components/Navegacao'
+import Main from '../Components/Main'
 import Footer from '../Components/Footer'
+
 function PageInicio() {
     return (
         <div>
-            <Header />
-            <Navegacao />
-            <h1>Home</h1>
-            <p>Seja bem-vindo ao site!</p>
+            <Header/>
+            <Navegacao/>
+            <Main/>
             <Footer/>
         </div>
     )

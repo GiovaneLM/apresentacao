@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from 'react'; // Importa React e os hooks useState e useEffect
-
+import './Formulario.css'; // Importa o arquivo de estilos CSS
 
 function Formulario() {
+
+
+
     const [data, setData] = useState(null); // Estado para armazenar os dados recebidos da API
 
     useEffect(() => {
         // Hook useEffect para buscar dados da API quando o componente for montado
-        fetch('http://localhost:8000/api/data') // Faz uma requisição GET para a API
+        fetch('http://localhost:5000/api/data') // Faz uma requisição GET para a API
             .then(response => response.json()) // Converte a resposta para JSON
             .then(data => {
                 console.log(data); // Exibe os dados no console

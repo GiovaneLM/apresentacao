@@ -1,16 +1,21 @@
-import React from 'react'
-import './Navegacao.css'
+import React from 'react';
+import { Route, Routes } from 'react-router-dom'; // Mantém apenas Routes e Route
+import './Navegacao.css';
+import Home from './Main';
+import Formulario from './Formulario';
+
 function Navegacao() {
   return (
     <div>
         <nav>
             <ul>
-                <li><a href="/PageInicio">Inicio</a></li>
-                <li><a href="/PageFormulario">Formlario</a></li>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/Formulario">Formlario</a></li>
             </ul>
         </nav>
+
     </div>
-  )
+  );
 }
 
-export default Navegacao
+export default Navegacao;

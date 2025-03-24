@@ -28,20 +28,25 @@ app.use(cors());
 // Configura o middleware para interpretar requisições com JSON
 app.use(express.json());
 
+
+
 // Rota de teste para verificar se o servidor está rodando
 app.get('/api/data', (req, res) => {
     res.json({ message: 'Servidor está rodando!' });
 });
 
 // Rota de teste para verificar se o servidor está rodando
-app.get('/api/PageInicio', (req, res) => {
+app.get('/api/Home', (req, res) => {
     res.json({ message: 'Pagina de inicio' });
 });
 
 // Rota de teste para verificar se o servidor está rodando
-app.get('/api/PageFormulario', (req, res) => {
+app.get('/api/Formulario', (req, res) => {
     res.json({ message: 'pagina do formulario pada cadastrar um usuario' });
 });
+
+
+
 
 // Configuração da conexão com o banco de dados MySQL
 const db = mysql.createConnection({
@@ -59,6 +64,10 @@ db.connect((err) => {
     }
     console.log('Conectado ao banco de dados MySQL!'); // Mensagem de sucesso na conexão
 });
+
+
+
+
 
 // Rota para registrar um novo usuário
 app.post('/register', async (req, res) => {
@@ -106,6 +115,9 @@ app.post('/register', async (req, res) => {
     });
 });
 
+
+
+
 // Rota para login do usuário
 app.post('/login', (req, res) => {
     // Obtém os dados do corpo da requisição
@@ -129,6 +141,9 @@ app.post('/login', (req, res) => {
         }
     });
 });
+
+
+
 
 // Inicia o servidor na porta especificada
 app.listen(port, () => {
